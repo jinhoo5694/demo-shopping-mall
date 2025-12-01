@@ -98,7 +98,7 @@ export default function CheckoutPage() {
     router.push('/');
   };
 
-  const { total } = calculateCartTotal(cart);
+  const total = calculateCartTotal(cart);
   const shippingFee = calculateShippingFee(total);
   const finalTotal = total + shippingFee;
 

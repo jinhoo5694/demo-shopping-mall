@@ -12,7 +12,21 @@ interface OrderSummaryProps {
 }
 
 export default function OrderSummary({ items }: OrderSummaryProps) {
-  const { subtotal, discount, total } = calculateCartTotal(items);
+  // 원가 합계 계산
+  const originalTotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+
+  // 할인 적용 후 합계 계산
+  const subtotal = items.reduce((sum, item) => {
+    const itemPrice = item.product.discount
+      ? item.product.price * (1 - item.product.discount / 100)
+      : item.product.price;
+    return sum + itemPrice * item.quantity;
+  }, 0);
+
+  // 할인 금액
+  const discount = originalTotal - subtotal;
+  const total = subtotal;
+
   const shippingFee = calculateShippingFee(total);
   const finalTotal = total + shippingFee;
 
