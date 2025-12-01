@@ -44,7 +44,7 @@ export default function ProductFilter({
           className="w-full flex items-center justify-center gap-2 glass-strong rounded-xl px-4 py-3 hover:scale-105 transition-smooth"
         >
           <Filter className="w-5 h-5 text-purple-600" />
-          <span className="font-semibold text-gray-700 dark:text-gray-200">필터</span>
+          <span className="font-semibold text-gray-200">필터</span>
           {hasActiveFilters && (
             <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
               {[selectedCategory, selectedPriceRange].filter(Boolean).length}
@@ -89,16 +89,16 @@ export default function ProductFilter({
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25 }}
-              className="fixed right-0 top-0 bottom-0 w-[80%] max-w-sm bg-white z-50 overflow-y-auto md:hidden shadow-2xl"
+              className="fixed right-0 top-0 bottom-0 w-[80%] max-w-sm bg-slate-900 z-50 overflow-y-auto md:hidden shadow-2xl"
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-xl font-bold text-gray-800">필터</h2>
+                  <h2 className="text-xl font-bold text-gray-100">필터</h2>
                   <button
                     onClick={() => setIsMobileFilterOpen(false)}
-                    className="p-2 hover:bg-gray-100 rounded-lg transition-smooth"
+                    className="p-2 hover:bg-slate-800 rounded-lg transition-smooth"
                   >
-                    <X className="w-5 h-5 text-gray-600" />
+                    <X className="w-5 h-5 text-gray-400" />
                   </button>
                 </div>
 
@@ -174,9 +174,9 @@ function FilterContent({
           onClick={() => setIsCategoryOpen(!isCategoryOpen)}
           className="w-full flex items-center justify-between mb-3"
         >
-          <span className="font-semibold text-gray-800 dark:text-gray-100">카테고리</span>
+          <span className="font-semibold text-gray-100">카테고리</span>
           <ChevronDown
-            className={`w-5 h-5 text-gray-600 dark:text-gray-400 transition-transform ${
+            className={`w-5 h-5 text-gray-400 transition-transform ${
               isCategoryOpen ? 'rotate-180' : ''
             }`}
           />
@@ -198,7 +198,7 @@ function FilterContent({
                   className={`w-full text-left px-3 py-2 rounded-lg transition-smooth ${
                     selectedCategory === category.value
                       ? 'bg-gradient-primary text-white'
-                      : 'hover:bg-purple-50 dark:hover:bg-purple-900/20 text-gray-700 dark:text-gray-300'
+                      : 'hover:bg-purple-900/20 text-gray-300'
                   }`}
                 >
                   <span className="text-sm">{category.label}</span>
@@ -215,9 +215,9 @@ function FilterContent({
           onClick={() => setIsPriceOpen(!isPriceOpen)}
           className="w-full flex items-center justify-between mb-3"
         >
-          <span className="font-semibold text-gray-800 dark:text-gray-100">가격대</span>
+          <span className="font-semibold text-gray-100">가격대</span>
           <ChevronDown
-            className={`w-5 h-5 text-gray-600 dark:text-gray-400 transition-transform ${
+            className={`w-5 h-5 text-gray-400 transition-transform ${
               isPriceOpen ? 'rotate-180' : ''
             }`}
           />
@@ -239,7 +239,7 @@ function FilterContent({
                   className={`w-full text-left px-3 py-2 rounded-lg transition-smooth ${
                     selectedPriceRange === range.value
                       ? 'bg-gradient-primary text-white'
-                      : 'hover:bg-purple-50 dark:hover:bg-purple-900/20 text-gray-700 dark:text-gray-300'
+                      : 'hover:bg-purple-900/20 text-gray-300'
                   }`}
                 >
                   <span className="text-sm">{range.label}</span>

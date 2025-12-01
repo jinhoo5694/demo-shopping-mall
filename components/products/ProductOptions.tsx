@@ -39,7 +39,7 @@ export default function ProductOptions({ product }: ProductOptionsProps) {
       {/* Color Selection */}
       {product.colors && product.colors.length > 0 && (
         <div className="space-y-3">
-          <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">색상 선택</h3>
+          <h3 className="text-lg font-bold text-gray-100">색상 선택</h3>
           <div className="flex flex-wrap gap-3">
             {product.colors.map((color) => (
               <button
@@ -48,7 +48,7 @@ export default function ProductOptions({ product }: ProductOptionsProps) {
                 className={`px-6 py-3 rounded-lg font-semibold transition-smooth ${
                   selectedColor === color
                     ? 'bg-gradient-primary text-white shadow-lg'
-                    : 'glass-subtle text-gray-700 dark:text-gray-200 hover:glass-strong'
+                    : 'glass-subtle text-gray-200 hover:glass-strong'
                 }`}
               >
                 {color}
@@ -60,38 +60,38 @@ export default function ProductOptions({ product }: ProductOptionsProps) {
 
       {/* Quantity Selection */}
       <div className="space-y-3">
-        <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">수량 선택</h3>
+        <h3 className="text-lg font-bold text-gray-100">수량 선택</h3>
         <div className="flex items-center gap-4">
           <div className="flex items-center glass-subtle rounded-xl overflow-hidden">
             <button
               onClick={() => handleQuantityChange(-1)}
               disabled={quantity <= 1}
-              className="p-4 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-4 hover:bg-purple-900/20 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Minus className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+              <Minus className="w-5 h-5 text-gray-300" />
             </button>
-            <div className="px-8 py-4 font-bold text-xl text-gray-800 dark:text-gray-100 min-w-[80px] text-center">
+            <div className="px-8 py-4 font-bold text-xl text-gray-100 min-w-[80px] text-center">
               {quantity}
             </div>
             <button
               onClick={() => handleQuantityChange(1)}
               disabled={quantity >= 10}
-              className="p-4 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-4 hover:bg-purple-900/20 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Plus className="w-5 h-5 text-gray-700 dark:text-gray-300" />
+              <Plus className="w-5 h-5 text-gray-300" />
             </button>
           </div>
-          <span className="text-gray-600 dark:text-gray-400">최대 10개까지 구매 가능</span>
+          <span className="text-gray-400">최대 10개까지 구매 가능</span>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-200 dark:border-gray-700" />
+      <div className="border-t border-gray-700" />
 
       {/* Total Price */}
       <div className="glass-subtle rounded-xl p-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-lg text-gray-600 dark:text-gray-400">총 상품 금액</span>
+          <span className="text-lg text-gray-400">총 상품 금액</span>
           <div className="text-right">
             <div className="text-3xl font-bold text-gradient-primary">
               {((product.discount
@@ -99,7 +99,7 @@ export default function ProductOptions({ product }: ProductOptionsProps) {
                 : product.price) * quantity).toLocaleString()}원
             </div>
             {quantity > 1 && (
-              <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+              <div className="text-sm text-gray-400 mt-1">
                 ({(product.discount
                   ? product.price * (1 - product.discount / 100)
                   : product.price).toLocaleString()}원 × {quantity}개)
@@ -128,7 +128,7 @@ export default function ProductOptions({ product }: ProductOptionsProps) {
           className={`p-4 rounded-lg transition-smooth ${
             isLiked
               ? 'bg-gradient-secondary text-white'
-              : 'glass-subtle text-gray-700 dark:text-gray-300 hover:glass-strong'
+              : 'glass-subtle text-gray-300 hover:glass-strong'
           }`}
         >
           <Heart className={`w-6 h-6 ${isLiked ? 'fill-white' : ''}`} />
@@ -136,15 +136,15 @@ export default function ProductOptions({ product }: ProductOptionsProps) {
       </div>
 
       {/* Additional Info */}
-      <div className="glass-subtle rounded-xl p-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+      <div className="glass-subtle rounded-xl p-4 space-y-2 text-sm text-gray-400">
         <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 text-purple-600 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
           </svg>
           <span>오늘 주문 시 내일 도착 (서울/경기 지역)</span>
         </div>
         <div className="flex items-center gap-2">
-          <svg className="w-4 h-4 text-purple-600 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
           </svg>
           <span>7일 이내 무료 반품/교환</span>

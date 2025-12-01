@@ -7,12 +7,12 @@ import Button from '@/components/common/Button';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 dark:from-purple-900 dark:via-pink-900 dark:to-blue-900">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-900 via-pink-900 to-blue-900">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10 dark:opacity-20">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white dark:bg-purple-300 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-300 dark:bg-pink-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-300 dark:bg-blue-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
       {/* Content */}
@@ -30,8 +30,8 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center gap-2 glass-strong px-6 py-3 rounded-full"
           >
-            <Sparkles className="w-5 h-5 text-yellow-500 dark:text-yellow-300" />
-            <span className="text-gray-800 dark:text-white font-medium">2026 New Collection</span>
+            <Sparkles className="w-5 h-5 text-yellow-300" />
+            <span className="text-white font-medium">2026 New Collection</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -88,16 +88,16 @@ export default function HeroSection() {
             className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-12"
           >
             <div className="glass-strong rounded-2xl p-6">
-              <div className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-2">10+</div>
-              <div className="text-sm md:text-base text-gray-600 dark:text-white/80">프리미엄 상품</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
+              <div className="text-sm md:text-base text-white/80">프리미엄 상품</div>
             </div>
             <div className="glass-strong rounded-2xl p-6">
-              <div className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-2">4.8</div>
-              <div className="text-sm md:text-base text-gray-600 dark:text-white/80">평균 평점</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">4.8</div>
+              <div className="text-sm md:text-base text-white/80">평균 평점</div>
             </div>
             <div className="glass-strong rounded-2xl p-6">
-              <div className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-2">30%</div>
-              <div className="text-sm md:text-base text-gray-600 dark:text-white/80">최대 할인</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">30%</div>
+              <div className="text-sm md:text-base text-white/80">최대 할인</div>
             </div>
           </motion.div>
         </motion.div>

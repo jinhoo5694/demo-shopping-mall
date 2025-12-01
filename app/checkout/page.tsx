@@ -109,7 +109,7 @@ export default function CheckoutPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Header */}
         <section className="relative bg-gradient-primary py-12 px-4">
           <div className="absolute inset-0 opacity-10">
@@ -180,10 +180,10 @@ export default function CheckoutPage() {
                       className="mt-1 w-5 h-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500 cursor-pointer"
                     />
                     <div className="flex-1">
-                      <p className="font-semibold text-gray-800 group-hover:text-purple-600 transition-smooth">
+                      <p className="font-semibold text-gray-100 group-hover:text-purple-400 transition-smooth">
                         구매 조건 및 개인정보 처리에 동의합니다 (필수)
                       </p>
-                      <p className="text-sm text-gray-600 mt-1">
+                      <p className="text-sm text-gray-400 mt-1">
                         주문 내용을 확인하였으며, 결제 진행에 동의합니다.
                       </p>
                     </div>
@@ -236,11 +236,11 @@ export default function CheckoutPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="hidden lg:block mt-6 glass-subtle rounded-xl p-4 text-sm text-gray-600"
+                  className="hidden lg:block mt-6 glass-subtle rounded-xl p-4 text-sm text-gray-400"
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <Lock className="w-4 h-4 text-green-600" />
-                    <span className="font-semibold text-gray-800">
+                    <Lock className="w-4 h-4 text-green-400" />
+                    <span className="font-semibold text-gray-100">
                       안전한 결제
                     </span>
                   </div>

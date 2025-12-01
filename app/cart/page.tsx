@@ -18,7 +18,7 @@ export default function CartPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-50/40 via-white to-pink-50/40 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
       <section className="relative bg-gradient-primary py-16 px-4">
         <div className="absolute inset-0 opacity-10">
@@ -64,14 +64,14 @@ export default function CartPage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="flex items-center justify-between"
                 >
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                  <h2 className="text-2xl font-bold text-gray-100">
                     상품 목록 ({cart.length})
                   </h2>
                   <Button
                     onClick={handleClearCart}
                     variant="ghost"
                     size="sm"
-                    className="gap-2 hover:text-red-600 dark:hover:text-red-400"
+                    className="gap-2 hover:text-red-400"
                   >
                     <Trash2 className="w-4 h-4" />
                     전체 삭제

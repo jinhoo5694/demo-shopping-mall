@@ -100,12 +100,12 @@ export default function ProductsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-50/40 via-white to-pink-50/40 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 dark:from-purple-900 dark:via-pink-900 dark:to-blue-900 py-20 px-4">
-        <div className="absolute inset-0 opacity-10 dark:opacity-20">
-          <div className="absolute top-10 left-10 w-40 h-40 bg-white dark:bg-purple-300 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-10 right-10 w-60 h-60 bg-white dark:bg-pink-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      <section className="relative bg-gradient-to-br from-purple-900 via-pink-900 to-blue-900 py-20 px-4">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-40 h-40 bg-purple-300 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-10 right-10 w-60 h-60 bg-pink-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
         </div>
 
         <div className="container mx-auto max-w-7xl relative z-10">
@@ -154,10 +154,10 @@ export default function ProductsPage() {
               <ScrollReveal>
                 <div className="flex items-center justify-between mb-8">
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+                    <h2 className="text-2xl font-bold text-gray-100 mb-2">
                       {selectedCategory || '전체 상품'}
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <p className="text-gray-400">
                       {filteredProducts.length}개의 상품
                     </p>
                   </div>
@@ -181,11 +181,11 @@ export default function ProductsPage() {
               ) : (
                 <ScrollReveal>
                   <div className="text-center py-20">
-                    <div className="glass-subtle rounded-2xl p-12 inline-block bg-white/50 dark:bg-slate-800/50">
-                      <p className="text-xl text-gray-600 dark:text-gray-300 mb-4">
+                    <div className="glass-subtle rounded-2xl p-12 inline-block bg-slate-800/50">
+                      <p className="text-xl text-gray-300 mb-4">
                         검색 결과가 없습니다
                       </p>
-                      <p className="text-gray-500 dark:text-gray-400">
+                      <p className="text-gray-400">
                         다른 필터를 선택해보세요
                       </p>
                     </div>

@@ -30,7 +30,7 @@ export default function BestsellerSlider({ products }: BestsellerSliderProps) {
   const visibleProducts = products.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-pink-50/30 to-purple-50/50 dark:from-slate-900 dark:via-slate-800/50 dark:to-slate-800">
+    <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-800/50 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -43,7 +43,7 @@ export default function BestsellerSlider({ products }: BestsellerSliderProps) {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-primary">
             베스트셀러
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             가장 많은 사랑을 받고 있는 인기 다이어리 컬렉션
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ export default function BestsellerSlider({ products }: BestsellerSliderProps) {
               onClick={handlePrev}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 glass-strong p-3 rounded-full hover:scale-110 transition-smooth hidden md:block"
             >
-              <ChevronLeft className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              <ChevronLeft className="w-6 h-6 text-purple-400" />
             </button>
           )}
           {currentIndex < maxIndex && (
@@ -64,7 +64,7 @@ export default function BestsellerSlider({ products }: BestsellerSliderProps) {
               onClick={handleNext}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 glass-strong p-3 rounded-full hover:scale-110 transition-smooth hidden md:block"
             >
-              <ChevronRight className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+              <ChevronRight className="w-6 h-6 text-purple-400" />
             </button>
           )}
 
@@ -101,31 +101,31 @@ export default function BestsellerSlider({ products }: BestsellerSliderProps) {
                       {/* Product Info */}
                       <div className="p-6">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-sm text-purple-600 dark:text-purple-400 font-medium">
+                          <span className="text-sm text-purple-400 font-medium">
                             {product.category}
                           </span>
                           {product.rating && (
                             <div className="flex items-center gap-1 text-yellow-500">
                               <Star className="w-4 h-4 fill-current" />
-                              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                              <span className="text-sm font-medium text-gray-300">
                                 {product.rating}
                               </span>
                             </div>
                           )}
                         </div>
 
-                        <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2 line-clamp-2">
+                        <h3 className="text-xl font-bold text-gray-100 mb-2 line-clamp-2">
                           {product.name}
                         </h3>
 
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
+                        <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                           {product.description}
                         </p>
 
                         <div className="flex items-center justify-between">
                           <div>
                             {product.originalPrice && (
-                              <div className="text-sm text-gray-400 dark:text-gray-500 line-through">
+                              <div className="text-sm text-gray-500 line-through">
                                 {formatPrice(product.originalPrice)}
                               </div>
                             )}
@@ -155,7 +155,7 @@ export default function BestsellerSlider({ products }: BestsellerSliderProps) {
                 className={`w-2 h-2 rounded-full transition-all ${
                   index === currentIndex
                     ? 'w-8 bg-gradient-primary'
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    : 'bg-gray-600 hover:bg-gray-500'
                 }`}
               />
             ))}
@@ -171,7 +171,7 @@ export default function BestsellerSlider({ products }: BestsellerSliderProps) {
           className="text-center mt-12"
         >
           <Link href="/products?filter=bestseller">
-            <Button variant="outline" size="lg" className="bg-white dark:bg-slate-800 border-2 border-purple-400 dark:border-purple-500 !text-purple-700 dark:!text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:border-purple-500 shadow-md">
+            <Button variant="outline" size="lg" className="bg-slate-800 border-2 border-purple-500 !text-purple-300 hover:bg-purple-900/30 hover:border-purple-500 shadow-md">
               전체 베스트셀러 보기
             </Button>
           </Link>

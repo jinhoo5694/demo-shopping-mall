@@ -58,13 +58,13 @@ export default function CartItem({ item }: CartItemProps) {
             <div className="flex-1 min-w-0 pr-4">
               <Link
                 href={`/products/${item.product.id}`}
-                className="block hover:text-purple-600 dark:hover:text-purple-400 transition-smooth"
+                className="block hover:text-purple-400 transition-smooth"
               >
-                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-1 truncate">
+                <h3 className="text-lg font-bold text-gray-100 mb-1 truncate">
                   {item.product.name}
                 </h3>
               </Link>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{item.product.category}</p>
+              <p className="text-sm text-gray-400">{item.product.category}</p>
             </div>
 
             {/* Remove Button */}
@@ -72,9 +72,9 @@ export default function CartItem({ item }: CartItemProps) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={handleRemove}
-              className="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-smooth group"
+              className="p-2 hover:bg-red-900/20 rounded-lg transition-smooth group"
             >
-              <X className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-red-600 dark:group-hover:text-red-400" />
+              <X className="w-5 h-5 text-gray-500 group-hover:text-red-400" />
             </motion.button>
           </div>
 
@@ -86,22 +86,22 @@ export default function CartItem({ item }: CartItemProps) {
                 <button
                   onClick={() => handleQuantityChange(-1)}
                   disabled={item.quantity <= 1}
-                  className="p-3 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="p-3 hover:bg-purple-900/20 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Minus className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+                  <Minus className="w-4 h-4 text-gray-300" />
                 </button>
-                <div className="px-4 py-3 font-bold text-gray-800 dark:text-gray-100 min-w-[60px] text-center">
+                <div className="px-4 py-3 font-bold text-gray-100 min-w-[60px] text-center">
                   {item.quantity}
                 </div>
                 <button
                   onClick={() => handleQuantityChange(1)}
                   disabled={item.quantity >= 10}
-                  className="p-3 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="p-3 hover:bg-purple-900/20 transition-smooth disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Plus className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+                  <Plus className="w-4 h-4 text-gray-300" />
                 </button>
               </div>
-              <span className="text-sm text-gray-500 dark:text-gray-400">최대 10개</span>
+              <span className="text-sm text-gray-400">최대 10개</span>
             </div>
 
             {/* Price */}
@@ -111,15 +111,15 @@ export default function CartItem({ item }: CartItemProps) {
               </div>
               {item.product.discount ? (
                 <div className="flex items-center gap-2 justify-end mt-1">
-                  <span className="text-sm text-gray-400 dark:text-gray-500 line-through">
+                  <span className="text-sm text-gray-500 line-through">
                     {formatPrice(item.product.price * item.quantity)}
                   </span>
-                  <span className="text-sm font-semibold text-pink-600 dark:text-pink-400">
+                  <span className="text-sm font-semibold text-pink-400">
                     {item.product.discount}% OFF
                   </span>
                 </div>
               ) : (
-                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                <div className="text-sm text-gray-400 mt-1">
                   {formatPrice(item.product.price)} × {item.quantity}
                 </div>
               )}

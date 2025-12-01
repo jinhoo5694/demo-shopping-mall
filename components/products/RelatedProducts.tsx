@@ -31,14 +31,14 @@ export default function RelatedProducts({ currentProduct, allProducts }: Related
   }
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <section className="py-16 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto max-w-7xl">
         <ScrollReveal>
           <div className="text-center mb-12">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+              className="text-3xl md:text-4xl font-bold text-gray-100 mb-4"
             >
               이런 상품은 어떠세요?
             </motion.h2>
@@ -46,7 +46,7 @@ export default function RelatedProducts({ currentProduct, allProducts }: Related
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-lg text-gray-600 dark:text-gray-400"
+              className="text-lg text-gray-400"
             >
               {currentProduct.category} 카테고리의 인기 상품들
             </motion.p>

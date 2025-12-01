@@ -83,7 +83,7 @@ export default function EventTimer({ endDate, startDate }: EventTimerProps) {
   if (isEnded) {
     return (
       <div className="glass-strong rounded-2xl p-6 text-center">
-        <div className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-300">
+        <div className="inline-flex items-center gap-2 text-gray-300">
           <Clock className="w-5 h-5" />
           <span className="font-semibold">이벤트가 종료되었습니다</span>
         </div>
@@ -94,8 +94,8 @@ export default function EventTimer({ endDate, startDate }: EventTimerProps) {
   return (
     <div className="glass-strong rounded-2xl p-6">
       <div className="flex items-center justify-center gap-2 mb-4">
-        <Clock className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-        <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">
+        <Clock className="w-5 h-5 text-purple-400" />
+        <h3 className="text-lg font-bold text-gray-100">
           {isStarted ? '이벤트 종료까지' : '이벤트 시작까지'}
         </h3>
       </div>
@@ -120,7 +120,7 @@ export default function EventTimer({ endDate, startDate }: EventTimerProps) {
                 {unit.value.toString().padStart(2, '0')}
               </motion.div>
             </div>
-            <div className="text-xs md:text-sm font-semibold text-gray-600 dark:text-gray-400">
+            <div className="text-xs md:text-sm font-semibold text-gray-400">
               {unit.label}
             </div>
           </motion.div>
@@ -131,9 +131,9 @@ export default function EventTimer({ endDate, startDate }: EventTimerProps) {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-4 bg-pink-50 dark:bg-pink-900/30 rounded-xl p-3 text-center"
+          className="mt-4 bg-pink-900/30 rounded-xl p-3 text-center"
         >
-          <p className="text-sm font-semibold text-pink-600 dark:text-pink-400">
+          <p className="text-sm font-semibold text-pink-400">
             ⚡ 마감 임박! 서둘러 주세요!
           </p>
         </motion.div>

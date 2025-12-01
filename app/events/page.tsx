@@ -16,13 +16,13 @@ export default function EventsPage() {
   );
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-50/40 via-white to-pink-50/40 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 dark:from-purple-900 dark:via-pink-900 dark:to-blue-900 py-16 px-4">
-        <div className="absolute inset-0 opacity-10 dark:opacity-20">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white dark:bg-purple-300 rounded-full blur-3xl animate-float" />
+      <section className="relative bg-gradient-to-br from-purple-900 via-pink-900 to-blue-900 py-16 px-4">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-purple-300 rounded-full blur-3xl animate-float" />
           <div
-            className="absolute bottom-10 right-10 w-40 h-40 bg-white dark:bg-pink-300 rounded-full blur-3xl animate-float"
+            className="absolute bottom-10 right-10 w-40 h-40 bg-pink-300 rounded-full blur-3xl animate-float"
             style={{ animationDelay: '1s' }}
           />
         </div>
@@ -61,9 +61,9 @@ export default function EventsPage() {
             >
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">진행중인 이벤트</h2>
+                <h2 className="text-3xl font-bold text-gray-100">진행중인 이벤트</h2>
               </div>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-400">
                 지금 바로 참여하실 수 있는 이벤트입니다
               </p>
             </motion.div>
@@ -89,10 +89,10 @@ export default function EventsPage() {
               className="mb-8"
             >
               <div className="flex items-center gap-3 mb-2">
-                <Clock className="w-7 h-7 text-blue-600 dark:text-blue-400" />
-                <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">오픈 예정 이벤트</h2>
+                <Clock className="w-7 h-7 text-blue-400" />
+                <h2 className="text-3xl font-bold text-gray-100">오픈 예정 이벤트</h2>
               </div>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-400">
                 곧 시작될 특별한 이벤트를 미리 확인하세요
               </p>
             </motion.div>
@@ -118,10 +118,10 @@ export default function EventsPage() {
               className="mb-8"
             >
               <div className="flex items-center gap-3 mb-2">
-                <Calendar className="w-7 h-7 text-gray-600 dark:text-gray-400" />
-                <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">종료된 이벤트</h2>
+                <Calendar className="w-7 h-7 text-gray-400" />
+                <h2 className="text-3xl font-bold text-gray-100">종료된 이벤트</h2>
               </div>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-400">
                 놓치신 이벤트는 다음 기회를 기다려주세요
               </p>
             </motion.div>
@@ -145,11 +145,11 @@ export default function EventsPage() {
               transition={{ duration: 0.5 }}
               className="glass-strong rounded-3xl p-12 max-w-md mx-auto text-center"
             >
-              <Sparkles className="w-16 h-16 text-purple-600 dark:text-purple-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+              <Sparkles className="w-16 h-16 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-100 mb-2">
                 준비중인 이벤트
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-400">
                 곧 멋진 이벤트로 찾아뵙겠습니다
               </p>
             </motion.div>

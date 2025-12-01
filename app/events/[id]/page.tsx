@@ -35,7 +35,7 @@ export default function EventDetailPage({
   const isUpcoming = new Date() < new Date(event.startDate);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative bg-gradient-primary py-12 px-4">
         <div className="absolute inset-0 opacity-10">
@@ -135,11 +135,11 @@ export default function EventDetailPage({
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="glass-strong rounded-2xl p-6 md:p-8"
               >
-                <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center gap-2">
-                  <Sparkles className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                <h2 className="text-2xl font-bold text-gray-100 mb-4 flex items-center gap-2">
+                  <Sparkles className="w-6 h-6 text-purple-400" />
                   이벤트 소개
                 </h2>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                <p className="text-gray-300 leading-relaxed whitespace-pre-line">
                   {event.description}
                 </p>
               </motion.div>
@@ -151,8 +151,8 @@ export default function EventDetailPage({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center gap-2">
-                    <Tag className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                  <h2 className="text-2xl font-bold text-gray-100 mb-6 flex items-center gap-2">
+                    <Tag className="w-6 h-6 text-purple-400" />
                     이벤트 상품 ({eventProducts.length}개)
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -188,29 +188,29 @@ export default function EventDetailPage({
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="glass-strong rounded-2xl p-6"
                 >
-                  <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-4">
+                  <h3 className="text-lg font-bold text-gray-100 mb-4">
                     이벤트 혜택
                   </h3>
                   <div className="space-y-3">
                     {event.discount && (
                       <div className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Tag className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                        <div className="w-6 h-6 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Tag className="w-4 h-4 text-purple-400" />
                         </div>
                         <div>
-                          <p className="font-semibold text-gray-800 dark:text-gray-100">
+                          <p className="font-semibold text-gray-100">
                             특별 할인
                           </p>
-                          <p className="text-sm text-gray-600 dark:text-gray-400">
+                          <p className="text-sm text-gray-400">
                             최대 {event.discount}% 할인 혜택
                           </p>
                         </div>
                       </div>
                     )}
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-6 h-6 rounded-full bg-green-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <svg
-                          className="w-4 h-4 text-green-600 dark:text-green-400"
+                          className="w-4 h-4 text-green-400"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -222,16 +222,16 @@ export default function EventDetailPage({
                         </svg>
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-800 dark:text-gray-100">무료 배송</p>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="font-semibold text-gray-100">무료 배송</p>
+                        <p className="text-sm text-gray-400">
                           30,000원 이상 구매 시
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-6 h-6 rounded-full bg-blue-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <svg
-                          className="w-4 h-4 text-blue-600 dark:text-blue-400"
+                          className="w-4 h-4 text-blue-400"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -243,10 +243,10 @@ export default function EventDetailPage({
                         </svg>
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-800 dark:text-gray-100">
+                        <p className="font-semibold text-gray-100">
                           빠른 배송
                         </p>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-400">
                           2-3일 이내 배송 완료
                         </p>
                       </div>
@@ -261,10 +261,10 @@ export default function EventDetailPage({
                   transition={{ duration: 0.6, delay: 0.5 }}
                   className="glass-subtle rounded-2xl p-6"
                 >
-                  <h3 className="text-sm font-bold text-gray-800 dark:text-gray-100 mb-3">
+                  <h3 className="text-sm font-bold text-gray-100 mb-3">
                     유의사항
                   </h3>
-                  <ul className="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+                  <ul className="space-y-2 text-xs text-gray-400">
                     <li>• 이벤트 기간 동안에만 할인이 적용됩니다.</li>
                     <li>• 일부 상품은 조기 품절될 수 있습니다.</li>
                     <li>• 중복 할인은 불가능합니다.</li>

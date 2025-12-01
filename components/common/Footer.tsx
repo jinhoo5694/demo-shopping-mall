@@ -32,7 +32,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mt-20 border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 backdrop-blur-md">
+    <footer className="mt-20 border-t border-slate-700 bg-slate-900 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
@@ -44,14 +44,14 @@ export default function Footer() {
                 2026 Diary Shop
               </span>
             </Link>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+            <p className="text-gray-400 mb-4 leading-relaxed">
               새로운 한 해를 위한 완벽한 다이어리를 만나보세요.
               <br />
               당신의 꿈과 계획을 기록할 최고의 파트너입니다.
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 <span>1588-0000</span>
@@ -69,13 +69,13 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-4">회사</h3>
+            <h3 className="font-semibold text-gray-200 mb-4">회사</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-smooth text-sm"
+                    className="text-gray-400 hover:text-purple-400 transition-smooth text-sm"
                   >
                     {link.label}
                   </Link>
@@ -86,13 +86,13 @@ export default function Footer() {
 
           {/* Support Links */}
           <div>
-            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-4">고객지원</h3>
+            <h3 className="font-semibold text-gray-200 mb-4">고객지원</h3>
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-smooth text-sm"
+                    className="text-gray-400 hover:text-purple-400 transition-smooth text-sm"
                   >
                     {link.label}
                   </Link>
@@ -103,13 +103,13 @@ export default function Footer() {
 
           {/* Shop Links */}
           <div>
-            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-4">쇼핑</h3>
+            <h3 className="font-semibold text-gray-200 mb-4">쇼핑</h3>
             <ul className="space-y-2">
               {footerLinks.shop.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-smooth text-sm"
+                    className="text-gray-400 hover:text-purple-400 transition-smooth text-sm"
                   >
                     {link.label}
                   </Link>
@@ -120,7 +120,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-200 dark:border-slate-700 pt-8">
+        <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Social Links */}
             <div className="flex items-center gap-4">
@@ -132,28 +132,28 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-smooth"
+                    className="p-2 rounded-full hover:bg-purple-900/30 transition-smooth"
                     aria-label={social.label}
                   >
-                    <Icon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                    <Icon className="w-5 h-5 text-gray-400" />
                   </a>
                 );
               })}
             </div>
 
             {/* Copyright */}
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-400">
               © {currentYear} 2026 Diary Shop. All rights reserved.
             </p>
           </div>
         </div>
 
         {/* Business Info */}
-        <div className="mt-6 pt-6 border-t border-gray-200 dark:border-slate-700">
-          <div className="text-xs text-gray-500 dark:text-gray-500 space-y-1">
+        <div className="mt-6 pt-6 border-t border-slate-700">
+          <div className="text-xs text-gray-500 space-y-1">
             <p>상호명: (주)2026다이어리 | 대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
             <p>통신판매업신고: 2026-서울강남-00000 | 개인정보관리책임자: 김철수</p>
-            <p className="text-gray-400 dark:text-gray-600 mt-2">
+            <p className="text-gray-600 mt-2">
               본 사이트는 데모 프로젝트이며 실제 쇼핑몰이 아닙니다.
             </p>
           </div>

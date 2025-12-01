@@ -75,37 +75,37 @@ export default function EventCard({ event, index = 0 }: EventCardProps) {
           {/* Event Info */}
           <div className="p-6">
             {/* Title */}
-            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-smooth">
+            <h3 className="text-xl font-bold text-gray-100 mb-3 group-hover:text-purple-400 transition-smooth">
               {event.title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2 leading-relaxed">
+            <p className="text-gray-400 mb-4 line-clamp-2 leading-relaxed">
               {event.description}
             </p>
 
             {/* Event Details */}
             <div className="space-y-2 mb-4">
-              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                <Calendar className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+              <div className="flex items-center gap-2 text-sm text-gray-400">
+                <Calendar className="w-4 h-4 text-purple-400" />
                 <span>
                   {formatDate(event.startDate)} - {formatDate(event.endDate)}
                 </span>
               </div>
               {event.productIds && event.productIds.length > 0 && (
-                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                  <Tag className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <Tag className="w-4 h-4 text-purple-400" />
                   <span>{event.productIds.length}개 상품 특가 진행</span>
                 </div>
               )}
             </div>
 
             {/* CTA */}
-            <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-              <span className="text-sm font-semibold text-purple-600">
+            <div className="flex items-center justify-between pt-4 border-t border-gray-700">
+              <span className="text-sm font-semibold text-purple-400">
                 이벤트 자세히 보기
               </span>
-              <ArrowRight className="w-5 h-5 text-purple-600 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-2 transition-transform" />
             </div>
           </div>
         </motion.div>

@@ -29,7 +29,7 @@ export default function EmptyCart() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4"
+          className="text-3xl font-bold text-gray-100 mb-4"
         >
           장바구니가 비어있습니다
         </motion.h2>
@@ -39,7 +39,7 @@ export default function EmptyCart() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed"
+          className="text-gray-300 mb-8 leading-relaxed"
         >
           마음에 드는 상품을 장바구니에 담아보세요.
           <br />
@@ -61,7 +61,7 @@ export default function EmptyCart() {
           </Link>
 
           <Link href="/" className="w-full">
-            <Button variant="outline" size="lg" className="w-full whitespace-nowrap bg-white dark:bg-slate-800 border-2 border-purple-400 dark:border-purple-500 !text-purple-700 dark:!text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:border-purple-500 font-semibold transition-all shadow-md">
+            <Button variant="outline" size="lg" className="w-full whitespace-nowrap bg-slate-800 border-2 border-purple-500 !text-purple-300 hover:bg-purple-900/30 hover:border-purple-500 font-semibold transition-all shadow-md">
               홈으로 가기
             </Button>
           </Link>

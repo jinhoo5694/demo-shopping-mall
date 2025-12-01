@@ -91,7 +91,7 @@ const categories = [
 
 export default function CategorySection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-purple-50/30 to-white dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -104,7 +104,7 @@ export default function CategorySection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient-primary">카테고리</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             당신의 라이프스타일에 맞는 완벽한 다이어리를 찾아보세요
           </p>
         </motion.div>
@@ -129,10 +129,10 @@ export default function CategorySection() {
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="font-bold text-gray-800 dark:text-gray-100 mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    <h3 className="font-bold text-gray-100 mb-2 group-hover:text-purple-400 transition-colors">
                       {category.name}
                     </h3>
-                    <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-xs text-gray-400 leading-relaxed">
                       {category.description}
                     </p>
                   </GlassCard>
@@ -155,8 +155,8 @@ export default function CategorySection() {
                 <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-xl">
                   <span className="text-4xl">🏆</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">베스트셀러</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                <h3 className="text-xl font-bold text-gray-100 mb-2">베스트셀러</h3>
+                <p className="text-gray-400 text-sm">
                   가장 많은 사랑을 받는 인기 상품
                 </p>
               </GlassCard>
@@ -174,8 +174,8 @@ export default function CategorySection() {
                 <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-xl">
                   <span className="text-4xl">✨</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">신상품</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                <h3 className="text-xl font-bold text-gray-100 mb-2">신상품</h3>
+                <p className="text-gray-400 text-sm">
                   새롭게 출시된 최신 다이어리
                 </p>
               </GlassCard>
@@ -193,8 +193,8 @@ export default function CategorySection() {
                 <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-xl">
                   <span className="text-4xl">🎁</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">특가 이벤트</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                <h3 className="text-xl font-bold text-gray-100 mb-2">특가 이벤트</h3>
+                <p className="text-gray-400 text-sm">
                   한정 기간 특별 할인 혜택
                 </p>
               </GlassCard>

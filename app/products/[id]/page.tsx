@@ -23,13 +23,13 @@ export default async function ProductDetailPage({
   const allProducts = getAllProducts();
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Breadcrumb */}
-      <div className="bg-white/50 backdrop-blur-sm border-b border-gray-200/50">
+      <div className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700/50">
         <div className="container mx-auto max-w-7xl px-4 py-4">
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-purple-600 transition-smooth"
+            className="inline-flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-smooth"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="font-semibold">상품 목록으로 돌아가기</span>

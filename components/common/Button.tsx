@@ -29,8 +29,8 @@ export default function Button({
   const variants = {
     primary: 'bg-gradient-primary text-white hover:shadow-lg hover:shadow-purple-500/50',
     secondary: 'bg-gradient-secondary text-white hover:shadow-lg hover:shadow-pink-500/50',
-    outline: 'border-2 border-purple-500 dark:border-purple-400 text-purple-700 dark:text-purple-300 hover:border-purple-600 dark:hover:border-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/20',
-    ghost: 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+    outline: 'border-2 border-purple-400 text-purple-300 hover:border-purple-300 hover:bg-purple-900/20',
+    ghost: 'text-gray-300 hover:bg-gray-800'
   };
 
   return (

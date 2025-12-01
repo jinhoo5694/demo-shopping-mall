@@ -27,11 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" className="dark">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="antialiased bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
+      <body className="antialiased bg-slate-900 text-white">
         <ThemeProvider>
           <CartProvider>
             <Navbar />
